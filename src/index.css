@@ -1,38 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 38 32 23;
+    --foreground: 26 26 26;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 246 241 233;
+    --card-foreground: 26 26 26;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 246 241 233;
+    --popover-foreground: 26 26 26;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 234 56 76;
+    --primary-foreground: 246 241 233;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 26 26 26;
+    --secondary-foreground: 246 241 233;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 220 200;
+    --muted-foreground: 100 100 100;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 234 56 76;
+    --accent-foreground: 246 241 233;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 234 56 76;
+    --destructive-foreground: 246 241 233;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 26 26 26;
+    --input: 26 26 26;
+    --ring: 234 56 76;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -96,6 +98,51 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#F6F1E9] text-foreground;
+    font-family: "Roboto", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+    border: 3px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a;
+  }
+
+  .brutalist-border-red {
+    border: 3px solid #ea384c;
+    box-shadow: 8px 8px 0px #ea384c;
+  }
+
+  .hover-lift {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #1a1a1a;
+  }
+
+  .text-huge {
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.9;
+  }
+
+  .text-display {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1;
   }
 }
